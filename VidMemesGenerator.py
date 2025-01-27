@@ -2,7 +2,7 @@ import os
 import json
 import random
 import string
-from moviepy import VideoFileClip, AudioFileClip, concatenate_audioclips, concatenate_videoclips
+from moviepy import VideoFileClip, AudioFileClip, concatenate_audioclips, concatenate_videoclips, ImageClip
 from moviepy.video.VideoClip import TextClip
 from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
 from moviepy import ColorClip
@@ -88,7 +88,6 @@ class VideoMemeGenerator:
 
             output_path = os.path.join(self.output_dir, self._generate_random_filename())
             final_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
-
 
     def generate_template1(self, meme_config):
         text_height_ratio = 0.1 
